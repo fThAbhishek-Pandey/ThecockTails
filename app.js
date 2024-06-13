@@ -1,7 +1,6 @@
-import  presentDrinks from "./src/presentDrinks";
+import  presentDrinks from "./src/presentDrinks.js";
 const url ="https://www.thecocktaildb.com/api/json/v1/1/search.php?s=a";
- const    app  =() =>{
+window.addEventListener('DOMContentLoaded',() =>{
         console.log("I am APP");
-        presentDrinks(URL);
-}
-window.addEventListener('DOMContentLoaded',app);
+        presentDrinks(url);
+});

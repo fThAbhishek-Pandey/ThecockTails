@@ -1,11 +1,11 @@
-import { showLoading } from "./toggleLoading";
+import { showLoading } from "./toggleLoading.js";
 
 const fetchAPI = async (url)=>{
     console.log("hello I am fetch API");
     showLoading();
-    const fetchResponce = fetch(url);
+    const fetchResponce = await fetch(url);
     console.log("fetchResponce : ",fetchResponce);
-    const fetchData = (await fetchResponce).json();
+    const fetchData = await fetchResponce.json();
     console.log("fetchData : ",fetchData);
     // const { idDrink, strDrink,strDrinkThumb } = fetchData;
     // console.log("idDrink : ",idDrink,"strDrink : ",strDrink,"strDrinkThumb : ",strDrinkThumb);

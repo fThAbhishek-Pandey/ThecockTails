@@ -1,5 +1,5 @@
-import getElement from "./getElement";
-import { hideLoading } from "./toggleLoading";
+import getElement from "./getElement.js";
+import { hideLoading } from "./toggleLoading.js";
 
 const  displayDrinks = ({drinks})=>{
        console.log("I am display drink function ");
@@ -15,7 +15,7 @@ const  displayDrinks = ({drinks})=>{
         const newDrinks = drinks.map((drink)=>{
             const { idDrink: id, strDrink: name, strDrinkThumb: image } = drink;
             return `
-             <a href="drink.html">
+             <a href="drink.html" target="_blank">
                <article class="cocktail" data-id="${id}">
                  <img src="${image}" alt="${name}" />
                  <h3>${name}</h3>
@@ -25,6 +25,7 @@ const  displayDrinks = ({drinks})=>{
         console.log("newDrinks : ",newDrinks);
         title.textContent ='';
         section.innerHTML = newDrinks;
+        hideLoading();
         return section;
 }
 export default displayDrinks;
