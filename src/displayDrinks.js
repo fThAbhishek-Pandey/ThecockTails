@@ -2,6 +2,7 @@ import getElement from "./getElement.js";
 import { hideLoading } from "./toggleLoading.js";
 
 const  displayDrinks = ({drinks})=>{
+        //  if(!drinks) return `<h2>I have No drink</h2>`;
        console.log("I am display drink function ");
         const section = getElement(".section-center");
         console.log("section : ",section);
